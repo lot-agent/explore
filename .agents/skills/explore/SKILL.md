@@ -54,7 +54,11 @@ Keep recon findings brief — weave them into the opening and decision areas rat
 
 ## Decision Log
 
-Maintain a scratchpad at `explore-context.jsonl` in the project root throughout the discussion. This file survives context compaction and is used to hand off decisions to plan/code mode.
+Maintain a scratchpad at `explore-context.jsonl` in the project's Claude Code config directory (the `~/.claude/projects/<project>/` directory for the current working directory — the same parent directory where `memory/` lives). Never write this file into the user's repository.
+
+**On session start:** If `explore-context.jsonl` already exists, read it. If the new topic is substantially different from the recorded decisions, delete the file and start fresh. If the topic is a continuation, keep the existing entries and append.
+
+This file survives context compaction and is used to hand off decisions to plan/code mode.
 
 **Write a line after each meaningful decision point.** Each line is a JSON object:
 
