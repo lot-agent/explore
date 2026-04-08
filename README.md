@@ -1,8 +1,8 @@
 # explore
 
-A Claude Code skill for conversational technical design discussions.
-
-Breadth-first exploration — surfaces options before diving deep. One sub-topic per turn. Think: senior engineer pair session, not a wall of text.
+A Claude Code skill that fixes Plan Mode's decision problem.
+Plan Mode is execution-focused — it buries design decisions inside walls of implementation detail. You end up rubber-stamping choices you never consciously made.
+/explore sits before Plan Mode. It surfaces every decision point, discusses them with you breadth-first, and records your choices. By the time you generate a plan, every architectural call is yours.
 
 ## What it does
 
